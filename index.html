@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>NPHere - Candle Shop</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">NPHere<span class="dot">.</span></a>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="about.html">About</a>
+        <a href="blog.html">Blog</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="faq.html">FAQ</a>
+        <a href="terms.html">Terms</a>
+        <a href="login.html" class="btn small">Login</a>
+        <button id="cartBtn" class="cart-btn">Cart (<span id="cartCount">0</span>)</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <h1>Handmade Candles by NPHere</h1>
+          <p>Luxury scents, crafted with love. Perfect for gifts, decor and cozy evenings.</p>
+          <a href="products.html" class="btn">Shop Candles</a>
+        </div>
+        <div class="hero-image">
+          <img src="https://images.unsplash.com/photo-1519058081285-90d0f2f7b0c6?w=1200&q=80&auto=format&fit=crop" alt="candles">
+        </div>
+      </div>
+    </section>
+
+    <section class="features container">
+      <div class="feature">
+        <img src="https://images.unsplash.com/photo-1503602642458-232111445657?w=800&q=60&auto=format&fit=crop" alt="">
+        <h3>Premium Ingredients</h3>
+        <p>Natural wax blends and long-lasting fragrances.</p>
+      </div>
+      <div class="feature">
+        <img src="https://images.unsplash.com/photo-1519744792095-2f2205e87b6f?w=800&q=60&auto=format&fit=crop" alt="">
+        <h3>Handmade</h3>
+        <p>Small batch production with attention to detail.</p>
+      </div>
+      <div class="feature">
+        <img src="https://images.unsplash.com/photo-1488900128323-21503983a07e?w=800&q=60&auto=format&fit=crop" alt="">
+        <h3>Fast Shipping</h3>
+        <p>Reliable delivery & beautiful packaging.</p>
+      </div>
+    </section>
+
+    <section class="products-preview container">
+      <h2>Featured Candles</h2>
+      <div id="featuredProducts" class="product-grid"></div>
+    </section>
+
+    <section class="cta container">
+      <h2>Want advice choosing a scent?</h2>
+      <p>Message us on WhatsApp or follow on Instagram.</p>
+      <div class="cta-actions">
+        <a class="btn" href="https://wa.me/8595986137" target="_blank" rel="noopener">WhatsApp</a>
+        <a class="btn outline" href="https://instagram.com/__nphere" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h4>NPHere</h4>
+        <p>Handmade luxury candles.</p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>Phone: <a href="tel:7982601015">7982601015</a></p>
+        <p>WhatsApp: <a href="https://wa.me/8595986137" target="_blank">8595986137</a></p>
+        <p>Instagram: <a href="https://instagram.com/__nphere" target="_blank">@__nphere</a></p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <a href="products.html">Products</a><br>
+        <a href="about.html">About</a><br>
+        <a href="terms.html">Terms</a>
+      </div>
+    </div>
+    <div class="container copyright">
+      © <span id="year"></span> NPHere. All rights reserved.
+    </div>
+  </footer>
+
+  <!-- Cart Modal (simple) -->
+  <div id="cartModal" class="modal hidden">
+    <div class="modal-content">
+      <button class="close" id="closeCart">×</button>
+      <h3>Your Cart</h3>
+      <div id="cartItems"></div>
+      <div class="cart-summary">
+        <div>Total: ₹<span id="cartTotal">0.00</span></div>
+        <div>
+          <button id="checkoutBtn" class="btn">Checkout</button>
+          <button id="clearCart" class="btn outline">Clear</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
