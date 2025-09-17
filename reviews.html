@@ -1,58 +1,130 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Reviews - NPHere</title>
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NPHere Reviews</title>
+    <link href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #fff8f0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .review-section {
+            max-width: 900px;
+            margin: 50px auto;
+            text-align: center;
+        }
+        .review-section h1 {
+            font-size: 2.5rem;
+            color: gold;
+            margin-bottom: 30px;
+        }
+        .swiper {
+            padding-bottom: 50px;
+        }
+        .swiper-slide {
+            background: #fff;
+            border: 2px solid gold;
+            border-radius: 15px;
+            padding: 30px 20px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .review-text {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+        .stars {
+            color: gold;
+            font-size: 1.3rem;
+        }
+        .swiper-button-next, .swiper-button-prev {
+            color: gold;
+        }
+        @media(max-width: 600px){
+            .review-section h1 {
+                font-size: 2rem;
+            }
+            .review-text {
+                font-size: 1rem;
+            }
+        }
+    </style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="index.html">NPHere<span class="dot">.</span></a>
-      <nav class="main-nav">
-        <a href="index.html">Home</a>
-        <a href="products.html">Products</a>
-        <a href="about.html">About</a>
-        <a href="blog.html">Blog</a>
-        <a href="portfolio.html">Portfolio</a>
-        <a href="reviews.html">Reviews</a>
-        <a href="faq.html">FAQ</a>
-        <a href="terms.html">Terms</a>
-        <a href="login.html" class="btn small">Login</a>
-        <button id="cartBtn7" class="cart-btn">Cart (<span id="cartCount7">0</span>)</button>
-      </nav>
-    </div>
-  </header>
+    <section class="review-section">
+        <h1>NPHere Reviews</h1>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <p class="review-text">Amazing quality! Loved the eco-friendly vibe.</p>
+                    <div class="stars">★★★★★</div>
+                </div>
+                <div class="swiper-slide">
+                    <p class="review-text">Stylish and elegant, totally worth it!</p>
+                    <div class="stars">★★★★★</div>
+                </div>
+                <div class="swiper-slide">
+                    <p class="review-text">Superb customer service and fast delivery.</p>
+                    <div class="stars">★★★★☆</div>
+                </div>
+                <div class="swiper-slide">
+                    <p class="review-text">Love the colors and packaging, very premium feel.</p>
+                    <div class="stars">★★★★★</div>
+                </div>
+                <div class="swiper-slide">
+                    <p class="review-text">High-quality product, exactly as described.</p>
+                    <div class="stars">★★★★★</div>
+                </div>
+                <div class="swiper-slide">
+                    <p class="review-text">Perfect gift idea, my friends loved it!</p>
+                    <div class="stars">★★★★☆</div>
+                </div>
+                <div class="swiper-slide">
+                    <p class="review-text">Elegant design, eco-friendly and beautiful.</p>
+                    <div class="stars">★★★★★</div>
+                </div>
+                <div class="swiper-slide">
+                    <p class="review-text">Very happy with my purchase, will order again.</p>
+                    <div class="stars">★★★★★</div>
+                </div>
+                <div class="swiper-slide">
+                    <p class="review-text">Affordable yet classy, totally recommend NPHere!</p>
+                    <div class="stars">★★★★☆</div>
+                </div>
+                <div class="swiper-slide">
+                    <p class="review-text">Stylish, eco-conscious and top quality product.</p>
+                    <div class="stars">★★★★★</div>
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </section>
 
-  <main class="container">
-    <h1>Customer Reviews</h1>
-    <div id="reviewList" class="reviews-grid">
-      <!-- reviews injected by script -->
-    </div>
-
-    <h3>Add a Review</h3>
-    <form id="reviewForm" class="review-form">
-      <input type="text" id="reviewer" placeholder="Your name" required>
-      <textarea id="reviewText" placeholder="Your review" required></textarea>
-      <button class="btn" type="submit">Submit</button>
-    </form>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <h4>NPHere</h4>
-        <p>Handmade luxury candles.</p>
-      </div>
-      <div>
-        <h4>Contact</h4>
-        <p>Phone: <a href="tel:7982601015">7982601015</a></p>
-        <p>WhatsApp: <a href="https://wa.me/8595986137" target="_blank">8595986137</a></p>
-      </div>
-    </div>
-  </footer>
-
-  <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.mySwiper', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+            },
+        });
+    </script>
 </body>
 </html>
