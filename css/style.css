@@ -1,96 +1,180 @@
-:root{
-  --bg:#fffaf6;
-  --text:#2b2b2b;
-  --muted:#6b6660;
-  --gold:#c9a86a;      /* champagne/gold */
-  --gold-dark:#b08945;
-  --accent:#f7f2ec;
-  --container:1100px;
-  --radius:10px;
-  --shadow: 0 6px 22px rgba(18,12,8,0.06);
-  --btn-text:#1b170f;
-  --price-color: #8b5e2a;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Best CSS Portfolio</title>
+  <style>
+    /* ================================
+       Global Variables
+    ================================= */
+    :root {
+      --bg-color: #ffffff;
+      --text-color: #111111;
+      --accent-color: #0077ff;
+      --card-bg: #f9f9f9;
+    }
 
-*{box-sizing:border-box}
-body{
-  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-  margin:0;
-  color:var(--text);
-  background:linear-gradient(180deg,var(--bg),#fff);
-  -webkit-font-smoothing:antialiased;
-  -moz-osx-font-smoothing:grayscale;
-}
+    body.dark {
+      --bg-color: #111111;
+      --text-color: #f1f1f1;
+      --accent-color: #00c3ff;
+      --card-bg: #1e1e1e;
+    }
 
-.container{max-width:var(--container);margin:0 auto;padding:28px;}
-.header-inner{display:flex;align-items:center;justify-content:space-between;}
-.site-header{background:white;border-bottom:1px solid rgba(0,0,0,0.04);position:sticky;top:0;z-index:40;}
-.brand{font-weight:700;color:var(--gold-dark);text-decoration:none;font-size:20px}
-.brand .dot{color:var(--text)}
-.main-nav a{margin:0 10px;color:var(--muted);text-decoration:none}
-.main-nav .btn.small{padding:6px 10px;background:var(--gold);border-radius:6px;color:var(--btn-text);text-decoration:none;margin-left:8px;font-weight:600}
-.cart-btn{background:#fff;border:1px solid rgba(0,0,0,0.06);padding:8px 10px;border-radius:8px;cursor:pointer}
+    /* ================================
+       Base Styles
+    ================================= */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+      transition: all 0.3s ease-in-out;
+    }
 
-.hero{padding:60px 0;background:linear-gradient(90deg, rgba(201,168,106,0.06), rgba(247,242,236,0.04));border-radius:14px;margin:20px 0}
-.hero-inner{display:flex;gap:24px;align-items:center}
-.hero-text{flex:1}
-.hero-text h1{font-size:36px;margin:0 0 12px;color:var(--gold-dark)}
-.hero-text p{color:var(--muted);margin:0 0 18px}
-.hero-text .btn{background:var(--gold);color:var(--btn-text);padding:12px 18px;border-radius:8px;text-decoration:none;font-weight:700}
-.hero-image img{width:380px;border-radius:12px;box-shadow:var(--shadow);display:block}
+    body {
+      background: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.6;
+    }
 
-.features{display:flex;gap:18px;margin:30px 0}
-.feature{flex:1;background:white;padding:18px;border-radius:12px;text-align:center;box-shadow:var(--shadow)}
-.feature img{width:100%;height:140px;object-fit:cover;border-radius:10px;margin-bottom:12px}
+    h1, h2, h3 {
+      margin-bottom: 10px;
+    }
 
-.products-preview h2{margin-top:6px}
-.product-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:14px}
-.product{background:white;padding:14px;border-radius:12px;box-shadow:var(--shadow);display:flex;flex-direction:column}
-.product img{width:100%;height:160px;object-fit:cover;border-radius:8px}
-.product h4{margin:8px 0 6px}
-.product p{color:var(--muted);font-size:14px;margin:0 0 10px}
-.price{font-weight:700;color:var(--price-color);margin-bottom:12px}
-.product .actions{margin-top:auto;display:flex;gap:8px}
-.btn{background:var(--gold);color:var(--btn-text);padding:10px 14px;border-radius:8px;border:none;cursor:pointer;text-decoration:none;font-weight:700}
-.btn.outline{background:transparent;border:2px solid var(--gold);color:var(--gold-dark)}
-.btn.small{padding:6px 10px;font-size:14px}
+    a {
+      color: var(--accent-color);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
 
-.cta{padding:26px;background:linear-gradient(180deg,#fffaf6,#fff);border-radius:12px;margin:30px 0;text-align:center}
-.cta .btn{margin:8px}
+    /* ================================
+       Header
+    ================================= */
+    header {
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--card-bg);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
 
-.site-footer{margin-top:40px;padding:30px 0;color:var(--muted);border-top:1px solid rgba(0,0,0,0.04)}
-.footer-grid{display:flex;gap:20px}
-.footer-grid > div{flex:1}
-.footer-grid a{color:var(--muted);text-decoration:none}
+    header h1 {
+      font-size: 24px;
+    }
 
-.container .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:16px}
-.gallery img{width:100%;height:220px;object-fit:cover;border-radius:8px;box-shadow:var(--shadow)}
+    /* ================================
+       Theme Toggle Button
+    ================================= */
+    .theme-toggle {
+      cursor: pointer;
+      padding: 10px 15px;
+      border-radius: 8px;
+      border: none;
+      background: var(--accent-color);
+      color: white;
+      font-weight: bold;
+    }
+    .theme-toggle:hover {
+      opacity: 0.85;
+    }
 
-.accordion .qa{margin-bottom:8px}
-.accordion .q{width:100%;text-align:left;padding:12px;border-radius:8px;background:#fff;border:1px solid rgba(0,0,0,0.04);cursor:pointer}
-.accordion .a{padding:12px;background:var(--accent);border-radius:8px;margin-top:6px;display:none}
+    /* ================================
+       Hero Section
+    ================================= */
+    .hero {
+      padding: 80px 20px;
+      text-align: center;
+    }
+    .hero h2 {
+      font-size: 40px;
+      margin-bottom: 15px;
+    }
+    .hero p {
+      font-size: 18px;
+      color: var(--text-color);
+      opacity: 0.8;
+    }
 
-.reviews-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
-.review{background:white;padding:14px;border-radius:10px;box-shadow:var(--shadow)}
-.review p{margin:6px 0}
+    /* ================================
+       Cards Section
+    ================================= */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      padding: 40px 20px;
+    }
 
-.auth, .about{padding:20px 0}
-.auth-form, .review-form{display:grid;gap:10px;max-width:420px}
-.auth-form input, .auth-form textarea, .review-form input, .review-form textarea{padding:10px;border-radius:8px;border:1px solid rgba(0,0,0,0.08)}
+    .card {
+      background: var(--card-bg);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-10px);
+    }
 
-.muted{color:var(--muted)}
+    /* ================================
+       Footer
+    ================================= */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: var(--card-bg);
+      font-size: 14px;
+      color: var(--text-color);
+      opacity: 0.7;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Portfolio</h1>
+    <button class="theme-toggle" onclick="toggleTheme()">Switch Theme</button>
+  </header>
 
-.modal{position:fixed;inset:0;background:rgba(0,0,0,0.4);display:flex;align-items:center;justify-content:center;padding:20px}
-.modal.hidden{display:none}
-.modal-content{background:white;padding:20px;border-radius:12px;max-width:720px;width:100%;box-shadow:var(--shadow);position:relative}
-.modal .close{position:absolute;right:12px;top:8px;background:transparent;border:none;font-size:22px}
-.cart-summary{display:flex;justify-content:space-between;align-items:center;margin-top:16px}
+  <section class="hero">
+    <h2>Hello, I'm a Web Developer 🚀</h2>
+    <p>I build modern, responsive, and user-friendly websites.</p>
+  </section>
 
-.price, .product .price { font-weight:700; color:var(--price-color) }
+  <section class="cards">
+    <div class="card">
+      <h3>Project One</h3>
+      <p>Amazing website with cool animations and responsive layout.</p>
+    </div>
+    <div class="card">
+      <h3>Project Two</h3>
+      <p>Dark & light theme support with smooth transitions.</p>
+    </div>
+    <div class="card">
+      <h3>Project Three</h3>
+      <p>Fully mobile-friendly design using CSS Grid and Flexbox.</p>
+    </div>
+  </section>
 
-/* responsive */
-@media (max-width:900px){
-  .hero-inner{flex-direction:column}
-  .hero-image img{width:100%}
-  .footer-grid{flex-direction:column}
-}
+  <footer>
+    © 2025 My Portfolio | All Rights Reserved
+  </footer>
+
+  <script>
+    // ================================
+    // Theme Toggle Function
+    // ================================
+    function toggleTheme() {
+      document.body.classList.toggle('dark');
+    }
+  </script>
+</body>
+</html>
