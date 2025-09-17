@@ -1,62 +1,141 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>FAQ - NPHere</title>
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>FAQ - NPHere</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #000;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+            background: #111;
+            border-bottom: 3px solid gold;
+        }
+        header img {
+            width: 100px;
+            height: auto;
+        }
+        header h1 {
+            color: gold;
+            margin-top: 10px;
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+        }
+        .faq-container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .faq-item {
+            background: #222;
+            border: 1px solid #444;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        .faq-question {
+            padding: 15px 20px;
+            cursor: pointer;
+            position: relative;
+            background: linear-gradient(45deg, #333, #111);
+        }
+        .faq-question:hover {
+            background: linear-gradient(45deg, #444, #222);
+        }
+        .faq-question::after {
+            content: "+";
+            position: absolute;
+            right: 20px;
+            font-size: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+        .faq-question.active::after {
+            transform: rotate(45deg);
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            padding: 0 20px;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            background: #111;
+        }
+        .faq-answer p {
+            padding: 15px 0;
+            margin: 0;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #111;
+            border-top: 3px solid gold;
+            color: #aaa;
+        }
+    </style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="index.html">NPHere<span class="dot">.</span></a>
-      <nav class="main-nav">
-        <a href="index.html">Home</a>
-        <a href="products.html">Products</a>
-        <a href="about.html">About</a>
-        <a href="blog.html">Blog</a>
-        <a href="portfolio.html">Portfolio</a>
-        <a href="reviews.html">Reviews</a>
-        <a href="faq.html">FAQ</a>
-        <a href="terms.html">Terms</a>
-        <a href="login.html" class="btn small">Login</a>
-        <button id="cartBtn5" class="cart-btn">Cart (<span id="cartCount5">0</span>)</button>
-      </nav>
-    </div>
-  </header>
 
-  <main class="container">
-    <h1>FAQ</h1>
-    <div class="accordion">
-      <div class="qa">
-        <button class="q">What ingredients do you use?</button>
-        <div class="a">We use a premium blend of natural waxes and phthalate-free fragrance oils.</div>
-      </div>
-      <div class="qa">
-        <button class="q">How long does a candle burn?</button>
-        <div class="a">Burn time varies by candle size — typical range 25-60 hours.</div>
-      </div>
-      <div class="qa">
-        <button class="q">Do you ship internationally?</button>
-        <div class="a">Currently we ship within India only. Contact for custom requests.</div>
-      </div>
-    </div>
-  </main>
+    <header>
+        <img src="image_2025-09-17_231219821.png" alt="NPHere Logo" />
+        <h1>NPHere - FAQ</h1>
+    </header>
 
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <h4>NPHere</h4>
-        <p>Handmade luxury candles.</p>
-      </div>
-      <div>
-        <h4>Contact</h4>
-        <p>Phone: <a href="tel:7982601015">7982601015</a></p>
-        <p>WhatsApp: <a href="https://wa.me/8595986137" target="_blank">8595986137</a></p>
-      </div>
-    </div>
-  </footer>
+    <div class="faq-container">
 
-  <script src="js/script.js"></script>
+        <div class="faq-item">
+            <div class="faq-question">Q1: Mujhe order kaise karna hai?</div>
+            <div class="faq-answer"><p>Aap website pe product select karo, add to cart karo aur payment complete karo. Bas, order confirm ho jayega.</p></div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Q2: Payment ke kaun kaun se options hain?</div>
+            <div class="faq-answer"><p>Credit card, debit card, UPI, net banking, aur cash on delivery sab available hai.</p></div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Q3: Delivery kitne din mein hoti hai?</div>
+            <div class="faq-answer"><p>Location ke hisab se 3 se 7 din ke andar delivery ho jaati hai.</p></div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Q4: Return policy kya hai?</div>
+            <div class="faq-answer"><p>Agar product mein defect ho ya galat item aaye, toh aap 7 din ke andar return request kar sakte ho.</p></div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Q5: Contact kaise karun agar help chahiye?</div>
+            <div class="faq-answer"><p>Aap hamare contact form, email ya customer support number se directly help le sakte ho.</p></div>
+        </div>
+
+    </div>
+
+    <footer>
+        &copy; 2025 NPHere. All rights reserved.
+    </footer>
+
+    <script>
+        const questions = document.querySelectorAll('.faq-question');
+        questions.forEach(question => {
+            question.addEventListener('click', () => {
+                question.classList.toggle('active');
+                const answer = question.nextElementSibling;
+                if(answer.style.maxHeight){
+                    answer.style.maxHeight = null;
+                    answer.style.padding = "0 20px";
+                } else {
+                    answer.style.maxHeight = answer.scrollHeight + "px";
+                    answer.style.padding = "15px 20px";
+                }
+            });
+        });
+    </script>
+
 </body>
 </html>
