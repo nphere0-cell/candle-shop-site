@@ -1,8 +1,161 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<
-  </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NPHere - Products</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #fefefe;
+            color: #333;
+        }
+        header {
+            background: linear-gradient(to right, #a8d5e2, #f7c6d0); /* Mist Blue & Color Pink */
+            padding: 20px;
+            text-align: center;
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #fff;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .products-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            padding: 40px;
+        }
+        .product-card {
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+        }
+        .product-image img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        .product-details {
+            padding: 20px;
+            text-align: center;
+        }
+        .product-name {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .product-price {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #e91e63; /* eye-catching pink */
+            margin-bottom: 15px;
+        }
+        .product-description {
+            font-size: 1em;
+            color: #555;
+            margin-bottom: 20px;
+        }
+        .add-to-cart {
+            display: inline-block;
+            padding: 12px 25px;
+            background: #a8d5e2; /* Mist Blue */
+            color: #fff;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        .add-to-cart:hover {
+            background: #f7c6d0; /* Color Pink hover */
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #333;
+            color: #fff;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
 
-  <script src="js/script.js"></script>
+<header>NPHere Products</header>
+
+<div class="products-container">
+
+    <!-- Product 1 -->
+    <div class="product-card">
+        <div class="product-image">
+            <img src="candle1.jpg" alt="Eco-friendly Soy Candle">
+        </div>
+        <div class="product-details">
+            <div class="product-name">Eco-friendly Soy Candle</div>
+            <div class="product-price">$20</div>
+            <div class="product-description">
+                Handmade, 100% natural soy candle. Available in Mist Blue & Color Pink.
+            </div>
+            <a href="#" class="add-to-cart">Add to Cart</a>
+        </div>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="product-card">
+        <div class="product-image">
+            <img src="candle2.jpg" alt="Hand-poured Scented Candle">
+        </div>
+        <div class="product-details">
+            <div class="product-name">Hand-poured Scented Candle</div>
+            <div class="product-price">$25</div>
+            <div class="product-description">
+                Luxurious aroma for your space, eco-friendly and fully handmade.
+            </div>
+            <a href="#" class="add-to-cart">Add to Cart</a>
+        </div>
+    </div>
+
+    <!-- Product 3 -->
+    <div class="product-card">
+        <div class="product-image">
+            <img src="candle3.jpg" alt="Colar Pink Relax Candle">
+        </div>
+        <div class="product-details">
+            <div class="product-name">Colar Pink Relax Candle</div>
+            <div class="product-price">$20</div>
+            <div class="product-description">
+                Calm your senses with this soft Mist Blue & Pink colored candle.
+            </div>
+            <a href="#" class="add-to-cart">Add to Cart</a>
+        </div>
+    </div>
+
+    <!-- Product 4 -->
+    <div class="product-card">
+        <div class="product-image">
+            <img src="candle4.jpg" alt="MIST BLUE Glow Candle">
+        </div>
+        <div class="product-details">
+            <div class="product-name">MIST BLUE Glow Candle</div>
+            <div class="product-price">$25</div>
+            <div class="product-description">
+                Eco-friendly, handmade candle giving a soothing glow in Mist Blue.
+            </div>
+            <a href="#" class="add-to-cart">Add to Cart</a>
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    © 2025 NPHere | Lighting up spaces with eco-friendly elegance
+</footer>
+
 </body>
 </html>
