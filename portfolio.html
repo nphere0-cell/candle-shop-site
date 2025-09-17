@@ -1,29 +1,120 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Portfolio - NPHere</title>
-  <link rel="stylesheet" href="css/style.css">
-</he
-    <h1>Portfolio</h1>
-    <div
-  </main>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NPHere Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: #f0f8ff; /* Mist Blue */
+      color: #333;
+    }
 
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <h4>NPHere</h4>
-        <p>Handmade luxury candles.</p>
-      </div>
-      <div>
-        <h4>Contact</h4>
-        <p>Phone: <a href="tel:7982601015">7982601015</a></p>
-        <p>WhatsApp: <a href="https://wa.me/8595986137" target="_blank">8595986137</a></p>
+    header {
+      text-align: center;
+      padding: 50px 20px 20px 20px;
+      background: linear-gradient(135deg, #d4a5f5, #ffb6c1); /* Mist Blue & Color Pink */
+      color: #fff;
+    }
+
+    header h1 {
+      font-size: 3em;
+      margin: 0;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+    }
+
+    header p {
+      font-size: 1.2em;
+      margin-top: 10px;
+      letter-spacing: 1px;
+    }
+
+    .portfolio-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .portfolio-item {
+      background: #fff;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+    }
+
+    .portfolio-item:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+    }
+
+    .portfolio-item img {
+      width: 100%;
+      display: block;
+      height: 200px;
+      object-fit: cover;
+      background: #ccc; /* Placeholder color for now */
+    }
+
+    .portfolio-info {
+      padding: 15px;
+      text-align: center;
+    }
+
+    .portfolio-info h3 {
+      margin: 10px 0 5px 0;
+      font-size: 1.2em;
+      color: #d4a5f5; /* Mist Blue */
+    }
+
+    .portfolio-info p {
+      font-size: 0.95em;
+      color: #555;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>NPHere Portfolio</h1>
+    <p>Eco-friendly soy candles, handmade, 100% natural</p>
+  </header>
+
+  <section class="portfolio-container">
+    <!-- Portfolio Items -->
+    <!-- Tum baad me image insert karogi src ke jagah -->
+    <!-- Loop 30 items -->
+    <div class="portfolio-item">
+      <img src="" alt="Candle 1">
+      <div class="portfolio-info">
+        <h3>Candle 1</h3>
+        <p>Eco-friendly soy candle, handmade, 100% natural</p>
       </div>
     </div>
-  </footer>
 
-  <script src="js/script.js"></script>
+    <div class="portfolio-item">
+      <img src="" alt="Candle 2">
+      <div class="portfolio-info">
+        <h3>Candle 2</h3>
+        <p>Eco-friendly soy candle, handmade, 100% natural</p>
+      </div>
+    </div>
+
+    <!-- Repeat same block for 30 items, tum easily duplicate kar sakti ho -->
+  </section>
+
 </body>
 </html>
