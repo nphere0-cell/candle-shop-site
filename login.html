@@ -1,56 +1,58 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Login - NPHere</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="index.html">NPHere<span class="dot">.</span></a>
-      <nav class="main-nav">
-        <a href="index.html">Home</a>
-        <a href="products.html">Products</a>
-        <a href="about.html">About</a>
-        <a href="blog.html">Blog</a>
-        <a href="portfolio.html">Portfolio</a>
-        <a href="reviews.html">Reviews</a>
-        <a href="faq.html">FAQ</a>
-        <a href="terms.html">Terms</a>
-        <a href="login.html" class="btn small">Login</a>
-        <button id="cartBtn9" class="cart-btn">Cart (<span id="cartCount9">0</span>)</button>
-      </nav>
-    </div>
-  </header>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NPHere Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+        }
 
-  <main class="container auth">
-    <h1>Login (Demo)</h1>
-    <form id="loginForm" class="auth-form">
-      <label for="email">Email</label>
-      <input id="email" type="email" required placeholder="you@example.com">
-      <label for="password">Password</label>
-      <input id="password" type="password" required placeholder="password">
-      <button class="btn" type="submit">Login</button>
-    </form>
-    <p class="muted">This is a demo front-end login. No real accounts are created.</p>
-  </main>
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #0b1d3a, #02122a);
+        }
 
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <h4>NPHere</h4>
-        <p>Handmade luxury candles.</p>
-      </div>
-      <div>
-        <h4>Contact</h4>
-        <p>Phone: <a href="tel:7982601015">7982601015</a></p>
-        <p>WhatsApp: <a href="https://wa.me/8595986137" target="_blank">8595986137</a></p>
-      </div>
-    </div>
-  </footer>
+        .login-container {
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid #d4af37;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            padding: 40px 60px;
+            width: 350px;
+            text-align: center;
+            box-shadow: 0 0 30px rgba(212, 175, 55, 0.5);
+            animation: fadeIn 1s ease-in-out;
+        }
 
-  <script src="js/script.js"></script>
-</body>
-</html>
+        @keyframes fadeIn {
+            from {opacity: 0; transform: translateY(-20px);}
+            to {opacity: 1; transform: translateY(0);}
+        }
+
+        .login-container img {
+            width: 100px;
+            margin-bottom: 20px;
+            animation: logoAnim 1s ease-in-out;
+        }
+
+        @keyframes logoAnim {
+            0% {transform: rotate(-360deg);}
+            100% {transform: rotate(0deg);}
+        }
+
+        .login-container h2 {
+            color: #d4af37;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+
+        .input-group
