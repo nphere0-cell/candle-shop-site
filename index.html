@@ -1,70 +1,159 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>NPHere - Candle Shop</title>
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>NPHere - Eco Luxury Candles</title>
+    <style>
+        /* General Styling */
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #0b1a33; /* deep navy blue */
+            color: #ffffff;
+            line-height: 1.6;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background-color: #0b1a33;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            animation: fadeIn 2s ease-in;
+        }
+        header img {
+            height: 50px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #ffcc00; /* gold highlight */
+        }
+        .banner {
+            text-align: center;
+            padding: 100px 20px;
+            animation: fadeInUp 2s ease-out;
+        }
+        .banner h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        .banner p {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+        .banner button {
+            background-color: #ffcc00;
+            border: none;
+            color: #0b1a33;
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: transform 0.3s;
+        }
+        .banner button:hover {
+            transform: scale(1.05);
+        }
+        .section {
+            padding: 60px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .section h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 32px;
+        }
+        .candles {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .candle {
+            background-color: #112244;
+            border-radius: 10px;
+            padding: 20px;
+            width: 250px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .candle:hover {
+            transform: scale(1.05);
+        }
+        .candle img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        footer {
+            background-color: #081029;
+            padding: 30px 20px;
+            text-align: center;
+            font-size: 14px;
+            color: #bbb;
+        }
+        footer a {
+            color: #ffcc00;
+            text-decoration: none;
+            margin: 0 5px;
+        }
+        footer .quick-links {
+            margin: 20px 0;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+        @keyframes fadeInUp {
+            from {opacity: 0; transform: translateY(50px);}
+            to {opacity: 1; transform: translateY(0);}
+        }
+    </style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="index.html">NPHere<span class="dot">.</span></a>
-      <nav class="main-nav">
-        <a href="index.html">Home</a>
-        <a href="products.html">Products</a>
-        <a href="about.html">About</a>
-        <a href="blog.html">Blog</a>
-        <a href="portfolio.html">Portfolio</a>
-        <a href="reviews.html">Reviews</a>
-        <a href="faq.html">FAQ</a>
-        <a href="terms.html">Terms</a>
-        <a href="login.html" class="btn small">Login</a>
-        <button id="cartBtn" class="cart-btn">Cart (<span id="cartCount">0</span>)</button>
-      </nav>
-    </div>
-  </header>
 
-  <main>
-    <section class="hero">
-      <div class="container hero-inner">
-        <div class="hero-text">
-        
-      </div>
-      <div>
-        <h4>Contact</h4>
-        <p>Phone: <a href="tel:7982601015">7982601015</a></p>
-        <p>WhatsApp: <a href="https://wa.me/8595986137" target="_blank">8595986137</a></p>
-        <p>Instagram: <a href="https://instagram.com/__nphere" target="_blank">@__nphere</a></p>
-      </div>
-      <div>
-        <h4>Quick Links</h4>
-        <a href="products.html">Products</a><br>
-        <a href="about.html">About</a><br>
-        <a href="terms.html">Terms</a>
-      </div>
-    </div>
-    <div class="container copyright">
-      © <span id="year"></span> NPHere. All rights reserved.
-    </div>
-  </footer>
+    <!-- Header -->
+    <header>
+        <img src="logo.png" alt="NPHere Logo"/>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Portfolio</a>
+            <a href="#">Blog</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
 
-  <!-- Cart Modal (simple) -->
-  <div id="cartModal" class="modal hidden">
-    <div class="modal-content">
-      <button class="close" id="closeCart">×</button>
-      <h3>Your Cart</h3>
-      <div id="cartItems"></div>
-      <div class="cart-summary">
-        <div>Total: ₹<span id="cartTotal">0.00</span></div>
-        <div>
-          <button id="checkoutBtn" class="btn">Checkout</button>
-          <button id="clearCart" class="btn outline">Clear</button>
-        </div>
-      </div>
+    <!-- Banner Section -->
+    <div class="banner">
+        <h1>NPHere</h1>
+        <p>Finally, a brand that combines eco-consciousness with luxury.</p>
+        <button>Shop Now</button>
     </div>
-  </div>
 
-  <script src="js/script.js"></script>
-</body>
-</html>
+    <!-- About Section -->
+    <div class="section" id="about">
+        <h2>About Us</h2>
+        <p>NPHere is dedicated to bringing you candles that are sustainably made and emotionally poured. Experience the perfect blend of luxury and eco-conscious living with every candle we create.</p>
+    </div>
+
+    <!-- Candles / Products Section -->
+    <div class="section" id="services">
+        <h2>Our Candles</h2>
+        <div class="candles">
+            <div class="candle">
+                <img src="https://via.placeholder.com/250x250?text=Candle+1" alt="Candle 1">
+                <h3>Eco Amber</h3>
